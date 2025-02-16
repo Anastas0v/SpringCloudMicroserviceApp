@@ -56,7 +56,7 @@ public class UserService
     public boolean deleteUser(Long id)
     {
         final int originalSize = users.size();
-        users = users.stream().filter(user -> user.getId() != id).collect(Collectors.toList());
+        users = users.stream().filter(user -> !user.getId().equals(id)).collect(Collectors.toList());
 
         return originalSize > users.size();
     }
