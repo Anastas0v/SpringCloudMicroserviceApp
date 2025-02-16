@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: composite
+  cloud:
+    config:
+      server:
+        composite:
+          - type: native
+            search-locations: classpath:config
+        bootstrap: true
+
+server:
+  port: 8888
