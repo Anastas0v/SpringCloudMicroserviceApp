@@ -19,6 +19,7 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter")
 	implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-server:4.2.0")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
