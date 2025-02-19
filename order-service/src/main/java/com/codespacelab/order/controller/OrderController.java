@@ -25,33 +25,33 @@ public class OrderController
     }
 
     @GetMapping("/all")
-    public List<OrderDTO> getOrders()
+    public List<OrderDTO> getOrders(@RequestParam(name = "userId") Long userId)
     {
         log.info("DataBase URL: " + database);
-        return orderService.getOrders();
+        return orderService.getOrders(userId);
     }
 
     @GetMapping
-    public OrderDTO getOrder(@RequestParam(name = "id") Long id)
+    public OrderDTO getOrder(@RequestParam(name = "id") Long id, @RequestParam(name = "userId") Long userId)
     {
-        return orderService.getOrder(id);
+        return orderService.getOrder(id, userId);
     }
 
     @PostMapping
-    public OrderDTO addOrder(@Validated @RequestBody OrderDTO orderDTO)
+    public OrderDTO addOrder(@Validated @RequestBody OrderDTO orderDTO, @RequestParam(name = "userId") Long userId)
     {
-        return orderService.addOrder(orderDTO);
+        return orderService.addOrder(orderDTO, userId);
     }
 
     @PutMapping
-    public OrderDTO updateOrder(@Validated @RequestBody OrderDTO orderDTO)
+    public OrderDTO updateOrder(@Validated @RequestBody OrderDTO orderDTO, @RequestParam(name = "userId") Long userId)
     {
-        return orderService.updateOrder(orderDTO);
+        return orderService.updateOrder(orderDTO, userId);
     }
 
     @DeleteMapping
-    public boolean deleteOrder(@RequestParam(name = "id") Long id)
+    public boolean deleteOrder(@RequestParam(name = "id") Long id, @RequestParam(name = "userId") Long userId)
     {
-        return orderService.deleteOrder(id);
+        return orderService.deleteOrder(id, userId);
     }
 }
