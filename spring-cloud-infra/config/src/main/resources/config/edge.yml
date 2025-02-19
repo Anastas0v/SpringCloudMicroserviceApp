@@ -1,0 +1,18 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: user
+          uri: lb:http://USER
+          predicates:
+            - Path=/microservice-app/user/**
+          filters:
+            - HeaderFilter
+            - RewritePath=/microservice-app/(?<segment>.*), /$\{segment}
+        - id: order
+          uri: lb:http://ORDER
+          predicates:
+            - Path=/microservice-app/order/**
+          filters:
+            - HeaderFilter
+            - RewritePath=/microservice-app/(?<segment>.*), /$\{segment}
