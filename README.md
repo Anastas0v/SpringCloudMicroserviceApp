@@ -1,14 +1,17 @@
-Spring Cloud Microservices App
-This repo holds the code for a Spring Cloud-based microservices application, built for developers who want to create distributed systems or just get how microservices tick.
+<h1>Spring Cloud Microservices App</h1>
+    <p>This repo contains the source code for a Spring Cloud-powered microservices application. It’s designed for developers eager to build distributed systems or anyone curious about how microservices come together.</p>
 
-What's Inside
-This project lets you:
-
-Get the lowdown on what microservices are and why they rock.
-Play with key Spring Cloud tools like:
-Eureka Registry
-Config Server
-Spring Cloud Gateway
-Build a working app that ties it all together.
-Dig into decoupling and monitoring microservices.
-By the end, you’ll have a functional app running on your machine and know the main Spring Cloud components inside out.
+<h2>What's Inside</h2>
+<p>With this project, you can:</p>
+    <ul>
+        <li>Grasp the essentials of microservices and why they’re a game-changer.</li>
+        <li>Experiment with core Spring Cloud components, including:
+            <ul>
+                <li><strong>Eureka Registry</strong></li>
+                <li><strong>Config Server</strong></li>
+                <li><strong>Spring Cloud Gateway</strong></li>
+            </ul>
+        </li>
+        <li>Assemble a fully functional app that ties everything together.</li>
+        <li>Explore microservice decoupling and monitoring techniques.</li>
+    </ul>
